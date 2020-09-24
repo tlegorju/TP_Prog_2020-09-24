@@ -152,21 +152,74 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraTarget: {fileID: 496948345}
   satellitCamera: {fileID: 801899286}
-  startRho: 30
-  startTheta: 30
-  startPhi: 3
+  startRho: 0.5
+  startTheta: 0.5
+  startPhi: 0.5
   currentRho: 0
   currentTheta: 0
   currentPhi: 0
+  targetRho: 0
+  targetTheta: 0
+  targetPhi: 0
   minRho: 1
-  maxRho: 10
+  maxRho: 5
   minTheta: 0
-  maxTheta: 350
-  minPhi: 0
-  maxPhi: 350
+  maxTheta: 359
+  minPhi: -90
+  maxPhi: 90
   numberOfRhoLevel: 12
   numberOfThetaLevel: 12
+  speedMouseX: 15
+  speedMouseY: 15
   lerpingTime: 1
+  minRhoCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 2
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 3
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  maxRhoCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 3
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 4
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &375205752
 Transform:
   m_ObjectHideFlags: 0
