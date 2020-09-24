@@ -1,0 +1,192 @@
+fileFormatVersion: 2
+guid: f0b63cae18db7634b94da746c298055a
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Cartoon_AN2_ fan
+    100004: Catoon-AC130
+    100006: Catoon-AC130_fan
+    100008: Catoon-AC130_fan2
+    100010: Catoon-AC130_fan3
+    100012: Catoon-AC130_fan4
+    100014: Catoon-AH1_fan
+    100016: Catoon-AH1_fan2
+    100018: Catoon_AH1
+    100020: Catoon_AH64
+    100022: Catoon_AN2
+    100024: Catoon_B2
+    100026: Catoon_B26
+    100028: Catoon_B26_fan
+    100030: Catoon_B26_fan2
+    100032: Catoon_B29
+    100034: Catoon_B29_fan
+    100036: Catoon_B29_fan2
+    100038: Catoon_B29_fan3
+    100040: Catoon_B29_fan4
+    100042: Catoon_B52
+    100044: Catoon_C17
+    100046: Catoon_CH47
+    100048: Catoon_CH47_fan
+    100050: Catoon_CH47_fan2
+    100052: Object001
+    400000: //RootNode
+    400002: Cartoon_AN2_ fan
+    400004: Catoon-AC130
+    400006: Catoon-AC130_fan
+    400008: Catoon-AC130_fan2
+    400010: Catoon-AC130_fan3
+    400012: Catoon-AC130_fan4
+    400014: Catoon-AH1_fan
+    400016: Catoon-AH1_fan2
+    400018: Catoon_AH1
+    400020: Catoon_AH64
+    400022: Catoon_AN2
+    400024: Catoon_B2
+    400026: Catoon_B26
+    400028: Catoon_B26_fan
+    400030: Catoon_B26_fan2
+    400032: Catoon_B29
+    400034: Catoon_B29_fan
+    400036: Catoon_B29_fan2
+    400038: Catoon_B29_fan3
+    400040: Catoon_B29_fan4
+    400042: Catoon_B52
+    400044: Catoon_C17
+    400046: Catoon_CH47
+    400048: Catoon_CH47_fan
+    400050: Catoon_CH47_fan2
+    400052: Object001
+    2300000: Cartoon_AN2_ fan
+    2300002: Catoon-AC130
+    2300004: Catoon-AC130_fan
+    2300006: Catoon-AC130_fan2
+    2300008: Catoon-AC130_fan3
+    2300010: Catoon-AC130_fan4
+    2300012: Catoon-AH1_fan
+    2300014: Catoon-AH1_fan2
+    2300016: Catoon_AH1
+    2300018: Catoon_AH64
+    2300020: Catoon_AN2
+    2300022: Catoon_B2
+    2300024: Catoon_B26
+    2300026: Catoon_B26_fan
+    2300028: Catoon_B26_fan2
+    2300030: Catoon_B29
+    2300032: Catoon_B29_fan
+    2300034: Catoon_B29_fan2
+    2300036: Catoon_B29_fan3
+    2300038: Catoon_B29_fan4
+    2300040: Catoon_B52
+    2300042: Catoon_C17
+    2300044: Catoon_CH47
+    2300046: Catoon_CH47_fan
+    2300048: Catoon_CH47_fan2
+    2300050: Object001
+    3300000: Cartoon_AN2_ fan
+    3300002: Catoon-AC130
+    3300004: Catoon-AC130_fan
+    3300006: Catoon-AC130_fan2
+    3300008: Catoon-AC130_fan3
+    3300010: Catoon-AC130_fan4
+    3300012: Catoon-AH1_fan
+    3300014: Catoon-AH1_fan2
+    3300016: Catoon_AH1
+    3300018: Catoon_AH64
+    3300020: Catoon_AN2
+    3300022: Catoon_B2
+    3300024: Catoon_B26
+    3300026: Catoon_B26_fan
+    3300028: Catoon_B26_fan2
+    3300030: Catoon_B29
+    3300032: Catoon_B29_fan
+    3300034: Catoon_B29_fan2
+    3300036: Catoon_B29_fan3
+    3300038: Catoon_B29_fan4
+    3300040: Catoon_B52
+    3300042: Catoon_C17
+    3300044: Catoon_CH47
+    3300046: Catoon_CH47_fan
+    3300048: Catoon_CH47_fan2
+    3300050: Object001
+    4300000: Catoon_AN2
+    4300002: Object001
+    4300004: Cartoon_AN2_ fan
+    4300006: Catoon_B2
+    4300008: Catoon_B26
+    4300010: Catoon_B26_fan
+    4300012: Catoon_B26_fan2
+    4300014: Catoon_B29
+    4300016: Catoon_B29_fan
+    4300018: Catoon_B29_fan2
+    4300020: Catoon_B29_fan3
+    4300022: Catoon_B29_fan4
+    4300024: Catoon_B52
+    4300026: Catoon_C17
+    4300028: Catoon_CH47_fan2
+    4300030: Catoon_CH47
+    4300032: Catoon_CH47_fan
+    4300034: Catoon-AC130
+    4300036: Catoon-AC130_fan
+    4300038: Catoon-AC130_fan2
+    4300040: Catoon-AC130_fan3
+    4300042: Catoon-AC130_fan4
+    4300044: Catoon_AH1
+    4300046: Catoon-AH1_fan
+    4300048: Catoon-AH1_fan2
+    4300050: Catoon_AH64
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 1
+  userData: 
