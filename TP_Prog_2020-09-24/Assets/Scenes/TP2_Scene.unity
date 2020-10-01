@@ -155,40 +155,33 @@ MonoBehaviour:
   startRho: 0.5
   startTheta: 0.5
   startPhi: 0.5
-  currentRho: 0
-  currentTheta: 0
-  currentPhi: 0
-  targetRho: 0
-  targetTheta: 0
-  targetPhi: 0
   minRho: 1
   maxRho: 5
   minTheta: 0
   maxTheta: 359
-  minPhi: -90
+  minPhi: 0
   maxPhi: 90
   numberOfRhoLevel: 12
-  numberOfThetaLevel: 12
+  numberOfThetaLevel: 4
   speedMouseX: 15
   speedMouseY: 15
-  lerpingTime: 1
   minRhoCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 2
-      inSlope: 1
-      outSlope: 1
+      inSlope: 3
+      outSlope: 3
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
-      value: 3
-      inSlope: 1
-      outSlope: 1
+      value: 5
+      inSlope: 3
+      outSlope: 3
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -202,17 +195,17 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 3
-      inSlope: 1
-      outSlope: 1
+      inSlope: 7
+      outSlope: 7
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
-      value: 4
-      inSlope: 1
-      outSlope: 1
+      value: 10
+      inSlope: 7
+      outSlope: 7
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
