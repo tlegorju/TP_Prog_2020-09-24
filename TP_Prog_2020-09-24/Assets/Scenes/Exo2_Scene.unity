@@ -163,8 +163,8 @@ MonoBehaviour:
   maxPhi: 90
   numberOfRhoLevel: 12
   numberOfThetaLevel: 4
-  speedMouseX: 15
-  speedMouseY: 15
+  speedMouseX: 1
+  speedMouseY: 1
   minRhoCurve:
     serializedVersion: 2
     m_Curve:

@@ -24,14 +24,12 @@ public class PlaneController : MonoBehaviour
     [Header("Rotation")]
     [SerializeField] float minPitch = -90;
     [SerializeField] float maxPitch = 90;
-    [SerializeField] float minBank = -10;
-    [SerializeField] float maxBank = 10;
     [SerializeField] float headingRotSpeed = 5;
     [SerializeField] float pitchRotSpeed = 5;
     [SerializeField] float bankRotSpeed = 5;
-    private float heading, pitch, bank;
-    private float Pitch { get { return pitch; } set { pitch = Mathf.Clamp(value, minPitch, maxPitch); } }
-    private float Bank { get { return bank; } set { bank = Mathf.Clamp(value, minBank, maxBank); } }
+    [SerializeField] AnimationCurve bankCurve;
+    private float heading, pitch;
+    private float bank; //Value between -1 & 1 computed by the animation curve
 
 
     // Start is called before the first frame update
@@ -84,15 +82,20 @@ public class PlaneController : MonoBehaviour
 
     private void UpdateRotation()
     {
-        transform.rotation = Quaternion.Euler(Pitch, heading, 0);
-        planeGfx.localRotation = Quaternion.AngleAxis(Bank, Vector3.forward);
+        transform.rotation = Quaternion.identity; //Réinitialize the transform rotation
+
+        //Rotate the transform according to the heading and the pitch
+        transform.rotation = Quaternion.AngleAxis(heading, Vector3.up) * Quaternion.AngleAxis(pitch, transform.right) * transform.rotation;
+
+        //Tilt the GFX to give a bette feedback
+        planeGfx.localRotation = Quaternion.AngleAxis(bankCurve.Evaluate(bank), Vector3.forward);
     }
 
     private void UpdateHeading(float axisValue)
     {
         heading += headingRotSpeed * Time.deltaTime * axisValue;
 
-        if (heading < 0)
+        if (heading < 0)    
             heading += 360;
         else if (heading >= 360)
             heading -= 360;
@@ -100,12 +103,12 @@ public class PlaneController : MonoBehaviour
 
     private void UpdatePitch(float axisValue)
     {
-        Pitch += pitchRotSpeed * Time.deltaTime * axisValue;
+        pitch = Mathf.Clamp(pitch+pitchRotSpeed * Time.deltaTime * axisValue, minPitch, maxPitch);
     }
 
     private void UpdateBank(float axisValue)
     {
-        Bank = Mathf.Lerp(Bank, -axisValue*maxBank, Time.deltaTime*bankRotSpeed);
+        bank = Mathf.Clamp(Mathf.Lerp(bank, -axisValue, Time.deltaTime * bankRotSpeed), -1, 1);
     }
 
     private void UpdateCameraPos()
