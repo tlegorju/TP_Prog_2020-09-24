@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class CameraSatelliteControler : MonoBehaviour
 {
+    [Header("Objects")]
     [SerializeField] Transform cameraTarget;    //The object we want to look at
     [SerializeField] Transform satellitCamera;  //The camera we want to move around
 
-    [SerializeField] private float startRho, startTheta, startPhi;  //The position we want to start at
+    [Header("Initialization")]
+    [SerializeField] private float startRho;
+    [SerializeField] private float startTheta;
+    [SerializeField] private float startPhi;  //The position we want to start at
 
     private float currentRho = 0, currentTheta = 0, currentPhi = 0; //The current position of the camera
     private float CurrentRho
@@ -53,26 +57,40 @@ public class CameraSatelliteControler : MonoBehaviour
                 targetTheta += 1;
                 currentTheta += 1;
             }
-            else if(targetTheta>=1)
+            else if(targetTheta>1)
             {
                 targetTheta -= 1;
                 currentTheta -= 1;
             }
         } }
-    
-    [SerializeField]
-    private float minRho=1, maxRho=12, minTheta, maxTheta, minPhi, maxPhi;
+
+    [Header("Bounds")]
+    [SerializeField] private float minTheta;
+    [SerializeField] private float maxTheta;
+    [SerializeField] private float minPhi;
+    [SerializeField] private float maxPhi;
+    [SerializeField] private AnimationCurve minRhoCurve;
+    [SerializeField] private AnimationCurve maxRhoCurve;
+    private float minRho = 1;
+    private float maxRho = 12;
 
     [SerializeField]
     private int numberOfRhoLevel = 12;
     [SerializeField]
     private int numberOfThetaLevel = 12;
 
+    [Header("Speeds")]
     [SerializeField]
-    private float speedMouseX = 15, speedMouseY = 15;
+    private float thetaSpeed = 1;
+    [SerializeField]
+    private float rhoSpeed = 1;
+    [SerializeField]
+    private float phiSpeed = 1;
+    [SerializeField]
+    private float speedMouseX = 15;
+    [SerializeField]
+    private float speedMouseY = 15;
     
-    [SerializeField] private AnimationCurve minRhoCurve;
-    [SerializeField] private AnimationCurve maxRhoCurve;
 
 
     // Start is called before the first frame update
@@ -109,9 +127,10 @@ public class CameraSatelliteControler : MonoBehaviour
             }
         }
 
-        CurrentRho = Mathf.MoveTowards(CurrentRho, targetRho, Time.deltaTime) ;
-        CurrentTheta = Mathf.MoveTowards(CurrentTheta, targetTheta, Time.deltaTime);
-        CurrentPhi = Mathf.MoveTowards(CurrentPhi, targetPhi, Time.deltaTime);
+        //Interpolate the value towards the desired values
+        CurrentRho = Mathf.MoveTowards(CurrentRho, targetRho, Time.deltaTime*rhoSpeed);
+        CurrentTheta = Mathf.MoveTowards(CurrentTheta, targetTheta, Time.deltaTime*thetaSpeed);
+        CurrentPhi = Mathf.MoveTowards(CurrentPhi, targetPhi, Time.deltaTime*phiSpeed);
     }
 
     private void LateUpdate()
@@ -122,8 +141,7 @@ public class CameraSatelliteControler : MonoBehaviour
             return;
         }
 
-        satellitCamera.position = Vector3.Lerp(satellitCamera.position,
-            SphericalToCartesianPos(GetInterpolatePhi(), GetInterpolateTheta(), GetInterpolateRho()), Time.deltaTime);
+        satellitCamera.position = SphericalToCartesianPos(GetInterpolatePhi(), GetInterpolateTheta(), GetInterpolateRho());
 
         satellitCamera.LookAt(cameraTarget);
     }
@@ -133,7 +151,9 @@ public class CameraSatelliteControler : MonoBehaviour
     {
         targetRho = startRho;
         TargetTheta = startTheta;
-        targetPhi = startPhi;
+        targetPhi = startPhi; 
+        minRho = minRhoCurve.Evaluate(currentPhi);
+        maxRho = maxRhoCurve.Evaluate(currentPhi);
     }
 
     //Unzoom the camera
